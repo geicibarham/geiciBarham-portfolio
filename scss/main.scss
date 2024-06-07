@@ -1,0 +1,44 @@
+@import "utils/normalize";
+@import "utils/colors";
+@import "utils/fonts";
+
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.nav-ul {
+  background-color: $dark-purple;
+
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  ul {
+    list-style: none;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    margin: 5em;
+    gap: 5em;
+    margin-right: 15em;
+  }
+  li a {
+    color: $white;
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+
+  strong {
+    color: $white;
+  }
+}
+
+.dev-name {
+  font-family: "Comic Neue", Arial, sans-serif;
+  font-size: 2rem;
+}
