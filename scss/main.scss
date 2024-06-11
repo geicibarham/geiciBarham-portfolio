@@ -1,36 +1,36 @@
 @import "utils/normalize";
 @import "utils/colors";
 @import "utils/fonts";
+@import "utils/mixins";
+@import "utils/cards";
 
 body {
   font-family: "Montserrat", Arial, sans-serif;
+  margin: 0;
 }
 
+// navigation
 .nav-ul {
-  background-color: $dark-purple;
-
-  height: 50px;
-  width: 100%;
-  position: fixed;
+  background-color: $super-dark-brown;
+  height: 3.125rem; // 50px
   top: 0;
   left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+  padding: 1rem; // 16px
+
   ul {
-    list-style: none;
+    @include normalize-list;
     display: flex;
-    list-style: none;
-    margin: 0;
-    margin: 5em;
-    gap: 5em;
-    margin-right: 15em;
+    margin: 0 15rem 0 5rem; // 240px 0 80px
+    gap: 5rem; // 80px
   }
+
   li a {
     color: $white;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.3125rem; // 21px
   }
 
   strong {
@@ -40,5 +40,171 @@ body {
 
 .dev-name {
   font-family: "Comic Neue", Arial, sans-serif;
-  font-size: 2rem;
+  font-size: 2rem; // 32px
+}
+
+// hero code
+h1.name-main {
+  font-family: "Dalla Respira", Arial, sans-serif;
+  color: $dark-brown;
+  font-weight: 700;
+  font-size: 5rem; // 32px
+  line-height: 1;
+  margin-bottom: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  letter-spacing: 0.5rem;
+
+  @include mobile {
+    font-size: 2rem; // 32px
+  }
+}
+
+.button-form-contact {
+  @include rounded-button($super-dark-brown, $white);
+}
+
+.hero-image {
+  @include flex-container;
+  justify-content: space-evenly;
+  background-color: $secondary-brown;
+  gap: 8rem;
+
+  @include mobile {
+    gap: 1rem; // 16px
+  }
+}
+
+.geici-image {
+  width: 35rem; // 400px
+  height: 35rem; // 400px
+  filter: drop-shadow(0.625rem 0 0.625rem rgb(15, 15, 15));
+
+  @include mobile {
+    width: 12rem; // 192px
+    height: auto;
+  }
+}
+
+.hero-text-container {
+  color: $dark-blue;
+
+  strong {
+    font-size: 1.2rem; // 24px
+    color: $black;
+    display: block;
+
+    @include mobile {
+      font-size: 1rem; // 16px
+    }
+  }
+
+  @include mobile {
+    font-size: 1.5rem; // 24px
+    margin-left: 0.5rem; // 8px
+  }
+}
+
+// about me section
+.about-me {
+  @include flex-container;
+  color: $purple;
+  background-color: $sunlit-sand;
+  padding: 3rem;
+  gap: 3rem;
+
+  @include mobile {
+    gap: 3rem; // 48px
+  }
+
+  p {
+    width: 80%;
+    color: $black;
+    font-size: 1rem; // 16px
+  }
+
+  strong {
+    color: $dark-brown;
+  }
+
+  .typewriter {
+    font-size: 2rem; // 32px
+  }
+
+  ul {
+    @include normalize-list;
+    color: $black;
+  }
+}
+
+.technology-image {
+  height: 35rem;
+  width: 35rem;
+  border-radius: 0.3125rem;
+  margin-left: 10rem;
+  filter: drop-shadow(0.325rem 0 0.325rem #432618);
+}
+
+svg {
+  margin-right: 0.5rem; // 8px
+}
+
+.technology-list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.2rem; // 8px
+  }
+}
+
+// projects
+
+.projects {
+  display: flex;
+  padding: 0 3rem;
+  justify-content: center;
+}
+
+.cards-list {
+  @include normalize-list;
+}
+
+// projects section
+
+.projects-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8eae7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: $brown;
+  }
+
+  .projects-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: $brown;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  align-content: center;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
 }

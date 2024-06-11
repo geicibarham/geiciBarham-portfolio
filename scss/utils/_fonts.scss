@@ -1,36 +1,39 @@
+/* scss/utils/fonts.scss */
 @font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/montserrat/Montserrat-Regular.woff2")
-      format("woff2"),
-    url("../../assets/fonts/montserrat/Montserrat-Regular.woff") format("woff"),
-    url("../../assets/fonts/montserrat/Montserrat-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+    font-family: "Montserrat";
+    src: url("../../assets/fonts/montserrat/static/Montserrat-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Montserrat";
+    src: url("../../assets/fonts/montserrat/static/Montserrat-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Comic Neue";
+    src: url("../../assets/fonts/comic-neue/ComicNeue-Regular.woff2") format("woff2"),
+         url("../../assets/fonts/comic-neue/ComicNeue-Regular.woff") format("woff"),
+         url("../../assets/fonts/comic-neue/ComicNeue-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Comic Neue";
+    src: url("../../assets/fonts/comic-neue/ComicNeue-Bold.woff2") format("woff2"),
+         url("../../assets/fonts/comic-neue/ComicNeue-Bold.woff") format("woff"),
+         url("../../assets/fonts/comic-neue/ComicNeue-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
 
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/montserrat/Montserrat-Bold.woff2") format("woff2"),
-    url("../../assets/fonts/montserrat/Montserrat-Bold.woff") format("woff"),
-    url("../../assets/fonts/montserrat/Montserrat-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Comic Neue";
-  src: url("../../assets/fonts/comic-neue/ComicNeue-Regular.woff2") format("woff2"),
-    url("../../assets/fonts/comic-neue/ComicNeue-Regular.woff") format("woff"),
-    url("../../assets/fonts/comic-neue/ComicNeue-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Comic Neue";
-  src: url("../../assets/fonts/comic-neue/ComicNeue-Bold.woff2") format("woff2"),
-    url("../../assets/fonts/comic-neue/ComicNeue-Bold.woff") format("woff"),
-    url("../../assets/fonts/comic-neue/ComicNeue-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
+  @font-face {
+    font-family: "Dalla Respira";
+    src: url("../../assets/fonts/della-respira/DellaRespira-Regular.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
