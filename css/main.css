@@ -283,6 +283,32 @@ body {
 .nav-ul strong {
   color: #fff;
 }
+.nav-ul .desktop-nav {
+  display: none;
+}
+.nav-ul .mobile-nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media screen and (min-width: 1025px) {
+  .nav-ul .desktop-nav {
+    display: flex;
+  }
+  .nav-ul .mobile-nav {
+    display: none;
+  }
+}
+
+.mobile-nav-button {
+  background-color: transparent;
+  border-style: hidden;
+  color: #fae9c3;
+}
+.mobile-nav-button svg {
+  fill: #fae9c3;
+}
 
 .dev-name {
   font-family: "Comic Neue", Arial, sans-serif;
@@ -301,6 +327,7 @@ h1.name-main {
   flex-direction: column;
   justify-content: center;
   letter-spacing: 0.5rem;
+  text-align: center;
 }
 @media screen and (max-width: 767px) {
   h1.name-main {
@@ -320,30 +347,66 @@ h1.name-main {
   background-color: #281a17;
   color: #fff;
 }
+@media screen and (max-width: 767px) {
+  .button-form-contact {
+    font-size: 1rem;
+    margin: 1rem 0;
+    padding: 0.8rem;
+  }
+}
 
 .hero-image {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  justify-content: space-evenly;
   background-color: #AFA581;
-  gap: 8rem;
+  gap: 0rem;
 }
 @media screen and (max-width: 767px) {
   .hero-image {
-    gap: 1rem;
+    gap: 0rem;
   }
+}
+
+.hero-decoration {
+  width: 24rem;
+}
+@media screen and (max-width: 767px) {
+  .hero-decoration {
+    width: 12rem;
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.divider .line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #432618;
+}
+
+.divider .diamond {
+  margin: 0 10px;
 }
 
 .geici-image {
   width: 35rem;
   height: 35rem;
   filter: drop-shadow(0.625rem 0 0.625rem rgb(15, 15, 15));
+  margin-top: auto;
 }
 @media screen and (max-width: 767px) {
   .geici-image {
-    width: 12rem;
+    width: 10rem;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
   }
 }
 
@@ -357,7 +420,8 @@ h1.name-main {
 }
 @media screen and (max-width: 767px) {
   .hero-text-container strong {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    margin-left: 0.8rem;
   }
 }
 @media screen and (max-width: 767px) {
@@ -371,20 +435,27 @@ h1.name-main {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  color: #2f286c;
   background-color: #eaceb9;
   padding: 3rem;
   gap: 3rem;
 }
 @media screen and (max-width: 767px) {
   .about-me {
-    gap: 3rem;
+    padding: 1rem;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
   }
 }
 .about-me p {
   width: 80%;
   color: #000;
   font-size: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .about-me p {
+    width: 100%;
+  }
 }
 .about-me strong {
   color: #432618;
@@ -404,9 +475,17 @@ h1.name-main {
   margin-left: 10rem;
   filter: drop-shadow(0.325rem 0 0.325rem #432618);
 }
+@media screen and (max-width: 767px) {
+  .technology-image {
+    height: 20rem;
+    width: 20rem;
+    margin-left: 0rem;
+  }
+}
 
 svg {
   margin-right: 0.5rem;
+  flex-shrink: 0;
 }
 
 .technology-list {
@@ -419,19 +498,13 @@ svg {
   margin-bottom: 0.2rem;
 }
 
-.projects {
-  display: flex;
-  padding: 0 3rem;
-  justify-content: center;
-}
-
 .cards-list {
   list-style: none;
 }
 
 .projects-section {
   text-align: center;
-  padding: 50px 20px;
+  padding: 0px 20px 30px;
   background-color: #f8eae7;
   display: flex;
   align-items: center;
@@ -459,6 +532,42 @@ svg {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  height: 330px;
+  position: relative;
+  background-color: #f5cfcc;
+  flex-direction: column;
+  gap: 3rem;
+}
+.footer .corner-right-img {
+  margin-left: auto;
+  position: absolute;
+  right: 5px;
+  margin-top: auto;
+  height: 330px;
+}
+.footer ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+  align-items: center;
+}
+.footer svg {
+  fill: #451412;
+  width: 34px;
+  height: 34px;
+}
+.footer strong {
+  font-size: 2rem;
+  color: #451412;
 }
 
 /*# sourceMappingURL=main.css.map */

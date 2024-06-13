@@ -26,7 +26,7 @@
   list-style: none;
 }
 
-@mixin rounded-button ($background-color, $color) {
+@mixin rounded-button($background-color, $color) {
   text-decoration: none;
   border-radius: 8rem;
   margin: 2rem 0;
@@ -39,38 +39,37 @@
   color: $color;
 }
 
-@mixin card (){
+@mixin card() {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  max-width: 390px;
 
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.2s;
-    max-width: 390px;
-
-    .card-text-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      padding: 1rem;
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-
-    p {
-      font-size: 1em;
-
-    }
-
-    
-
-    &:hover {
-      transform: translateY(-10px);
-    }
+  .card-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
   }
 
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
+@mixin column-mobile {
+  flex-direction: column;
+  display: flex;
+}

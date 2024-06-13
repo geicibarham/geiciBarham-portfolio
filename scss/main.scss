@@ -36,11 +36,42 @@ body {
   strong {
     color: $white;
   }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    @include normalize-list;
+    padding: 0;
+    margin: 0;
+  }
+
+  @include desktop {
+    .desktop-nav {
+      display: flex;
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+  }
+}
+
+.mobile-nav-button {
+  background-color: transparent;
+  border-style: hidden;
+  color: #fae9c3;
+
+  svg {
+    fill: #fae9c3;
+  }
 }
 
 .dev-name {
   font-family: "Comic Neue", Arial, sans-serif;
-  font-size: 2rem; // 32px
+  font-size: 2rem;
 }
 
 // hero code
@@ -56,6 +87,7 @@ h1.name-main {
   flex-direction: column;
   justify-content: center;
   letter-spacing: 0.5rem;
+  text-align: center;
 
   @include mobile {
     font-size: 2rem; // 32px
@@ -64,27 +96,60 @@ h1.name-main {
 
 .button-form-contact {
   @include rounded-button($super-dark-brown, $white);
+
+  @include mobile {
+    font-size: 1rem;
+    margin: 1rem 0;
+    padding: 0.8rem;
+  }
 }
 
 .hero-image {
   @include flex-container;
-  justify-content: space-evenly;
   background-color: $secondary-brown;
-  gap: 8rem;
+  gap: 0rem;
 
   @include mobile {
-    gap: 1rem; // 16px
+    gap: 0rem;
   }
 }
 
+.hero-decoration {
+  width: 24rem;
+
+  @include mobile {
+    width: 12rem;
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.divider .line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #432618;
+}
+
+.divider .diamond {
+  margin: 0 10px;
+}
 .geici-image {
   width: 35rem; // 400px
   height: 35rem; // 400px
   filter: drop-shadow(0.625rem 0 0.625rem rgb(15, 15, 15));
+  margin-top: auto;
 
   @include mobile {
-    width: 12rem; // 192px
+    width: 10rem;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
   }
 }
 
@@ -97,7 +162,8 @@ h1.name-main {
     display: block;
 
     @include mobile {
-      font-size: 1rem; // 16px
+      font-size: 0.8rem;
+      margin-left: 0.8rem;
     }
   }
 
@@ -110,19 +176,23 @@ h1.name-main {
 // about me section
 .about-me {
   @include flex-container;
-  color: $purple;
   background-color: $sunlit-sand;
   padding: 3rem;
   gap: 3rem;
 
   @include mobile {
-    gap: 3rem; // 48px
+    padding: 1rem;
+    @include column-mobile;
+    align-items: center;
   }
 
   p {
     width: 80%;
     color: $black;
     font-size: 1rem; // 16px
+    @include mobile {
+      width: 100%;
+    }
   }
 
   strong {
@@ -145,10 +215,16 @@ h1.name-main {
   border-radius: 0.3125rem;
   margin-left: 10rem;
   filter: drop-shadow(0.325rem 0 0.325rem #432618);
+  @include mobile {
+    height: 20rem;
+    width: 20rem;
+    margin-left: 0rem;
+  }
 }
 
 svg {
-  margin-right: 0.5rem; // 8px
+  margin-right: 0.5rem;
+  flex-shrink: 0;
 }
 
 .technology-list {
@@ -162,14 +238,6 @@ svg {
   }
 }
 
-// projects
-
-.projects {
-  display: flex;
-  padding: 0 3rem;
-  justify-content: center;
-}
-
 .cards-list {
   @include normalize-list;
 }
@@ -178,7 +246,7 @@ svg {
 
 .projects-section {
   text-align: center;
-  padding: 50px 20px;
+  padding: 0px 20px 30px;
   background-color: #f8eae7;
   display: flex;
   align-items: center;
@@ -206,5 +274,47 @@ svg {
 
   @include mobile {
     grid-template-columns: 1fr;
+  }
+}
+
+// footer
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  height: 330px;
+  position: relative;
+  background-color: #f5cfcc;
+  flex-direction: column;
+  gap: 3rem;
+
+  .corner-right-img {
+    margin-left: auto;
+    position: absolute;
+    right: 5px;
+    margin-top: auto;
+    height: 330px;
+  }
+
+  ul {
+    @include normalize-list;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  svg {
+    fill: #451412;
+    width: 34px;
+    height: 34px;
+  }
+
+  strong {
+    font-size: 2rem;
+    color: #451412;
   }
 }
