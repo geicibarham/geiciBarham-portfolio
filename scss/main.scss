@@ -9,28 +9,31 @@ body {
   margin: 0;
 }
 
+button {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
 // navigation
 .nav-ul {
   background-color: $super-dark-brown;
-  height: 3.125rem; // 50px
+  height: 3.125rem;
   top: 0;
   left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem; // 16px
+  padding: 1rem;
 
   ul {
     @include normalize-list;
     display: flex;
-    margin: 0 15rem 0 5rem; // 240px 0 80px
-    gap: 5rem; // 80px
+    gap: 5rem;
   }
 
   li a {
     color: $white;
     text-decoration: none;
-    font-size: 1.3125rem; // 21px
+    font-size: 1.3rem;
   }
 
   strong {
@@ -65,16 +68,53 @@ body {
   right: -850px;
   width: 250px;
   height: 100%;
-  background-color: #fff;
+  background-color: hsl(20, 60%, 90%);
+  background-size: 100%;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-  transition: right 0.3s ease;
-  z-index: 1001; /* Ensure it's above the overlay */
+  transition: right 0.5s ease;
+  z-index: 1001;
   padding: 20px;
   list-style: none;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  ul {
+    @include normalize-list;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 5rem;
+  }
+
+  li a {
+    color: $brown;
+    text-decoration: none;
+    font-weight: 600;
+  }
 }
 
 .drawer.open {
   right: 0;
+}
+
+.drawer-top {
+  width: 450px;
+  height: 60px;
+  position: absolute;
+  left: 0;
+}
+
+.close-nav-button button {
+  @include normalize-button;
+  position: absolute;
+  right: 0;
+  top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .overlay {
@@ -87,7 +127,7 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;
-  z-index: 1000; /* Ensure it's below the drawer */
+  z-index: 1000;
 }
 
 .overlay.visible {
@@ -95,19 +135,15 @@ body {
   visibility: visible;
 }
 /* Mobile Nav Button */
-.mobile-nav-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
 
 .mobile-nav-button {
   background-color: transparent;
   border-style: hidden;
-  color: #fae9c3;
+  color: $cream;
+  cursor: pointer;
 
   svg {
-    fill: #fae9c3;
+    fill: $cream;
   }
 }
 
@@ -121,7 +157,7 @@ h1.name-main {
   font-family: "Dalla Respira", Arial, sans-serif;
   color: $dark-brown;
   font-weight: 700;
-  font-size: 5rem; // 32px
+  font-size: 5rem;
   line-height: 1;
   margin-bottom: 1rem;
   position: relative;
@@ -132,17 +168,27 @@ h1.name-main {
   text-align: center;
 
   @include mobile {
-    font-size: 2rem; // 32px
+    font-size: 2rem;
+  }
+  @include tablet {
+    font-size: 3rem;
   }
 }
 
 .button-form-contact {
   @include rounded-button($super-dark-brown, $white);
+  margin-left: auto;
+    margin-right: auto;
 
   @include mobile {
     font-size: 1rem;
     margin: 1rem 0;
-    padding: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  @include tablet {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -173,18 +219,24 @@ h1.name-main {
 
 .divider .line {
   flex-grow: 1;
-  height: 2px;
-  background-color: #432618;
+  height: 1.8px;
+  background-color: $dark-brown;
 }
 
 .divider .diamond {
   margin: 0 10px;
 }
+
 .geici-image {
-  width: 35rem; // 400px
-  height: 35rem; // 400px
+  width: 35rem;
+  height: 35rem;
   filter: drop-shadow(0.625rem 0 0.625rem rgb(15, 15, 15));
   margin-top: auto;
+
+  @include x-small {
+    width: 9rem;
+    height: auto;
+  }
 
   @include mobile {
     width: 10rem;
@@ -193,48 +245,108 @@ h1.name-main {
     margin-right: auto;
     margin-top: auto;
   }
+  @include tablet {
+    width: 20rem;
+    height: auto;
+  }
 }
 
 .hero-text-container {
-  color: $dark-blue;
-
   strong {
-    font-size: 1.2rem; // 24px
+    font-size: 1.2rem;
     color: $black;
     display: block;
+    text-align: center;
 
     @include mobile {
       font-size: 0.8rem;
-      margin-left: 0.8rem;
+      text-align: left;
+    }
+
+    @include tablet {
+      text-align: center;
     }
   }
 
   @include mobile {
-    font-size: 1.5rem; // 24px
-    margin-left: 0.5rem; // 8px
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
   }
 }
-
 // about me section
-.about-me {
-  @include flex-container;
-  background-color: $sunlit-sand;
-  padding: 3rem;
-  gap: 3rem;
+.test-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 80px;
+}
 
-  @include mobile {
-    padding: 1rem;
-    @include column-mobile;
-    align-items: center;
+.hero-image-test {
+  background-color: $cream-brown;
+  @include flex-container;
+  gap: 0rem;
+
+  justify-content: center;
+
+  img {
+    width: 35rem;
+    height: 35rem;
+    padding: 0;
+    margin: 1rem;
+    margin-left: 5rem;
+    border-radius: 0.3125rem;
+    filter: drop-shadow(0.325rem 0 0.325rem $dark-brown);
+    @include mobile {
+      height: 22rem;
+      width: 22rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include tablet {
+      height: 30rem;
+      width: 30rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
-  p {
+  p,
+  ul {
+    display: flex;
     width: 80%;
-    color: $black;
-    font-size: 1rem; // 16px
+    flex-direction: column;
     @include mobile {
       width: 100%;
     }
+    @include tablet {
+      width: 100%;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    @include normalize-list;
+    color: $black;
+    width: 80%;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.2rem;
+  }
+
+  svg {
+    margin-right: 0.5rem;
+    flex-shrink: 0;
   }
 
   strong {
@@ -245,51 +357,42 @@ h1.name-main {
     font-size: 2rem; // 32px
   }
 
-  ul {
-    @include normalize-list;
-    color: $black;
-  }
-}
-
-.technology-image {
-  height: 35rem;
-  width: 35rem;
-  border-radius: 0.3125rem;
-  margin-left: 10rem;
-  filter: drop-shadow(0.325rem 0 0.325rem #432618);
-  @include mobile {
-    height: 20rem;
-    width: 20rem;
-    margin-left: 0rem;
-  }
-}
-
-svg {
-  margin-right: 0.5rem;
-  flex-shrink: 0;
-}
-
-.technology-list {
-  margin: 0;
-  padding: 0;
-
-  li {
+  .text-container {
     display: flex;
+    flex-direction: column;
+    width: 40%;
     align-items: center;
-    margin-bottom: 0.2rem; // 8px
-  }
-}
+    padding: 0;
+    margin: 0;
 
-.cards-list {
-  @include normalize-list;
+    @include mobile {
+      width: 100%;
+    }
+
+    @include tablet{
+      width: 80%;
+    }
+  }
+
+  @include mobile {
+    padding: 1rem;
+    @include column-mobile;
+    align-items: center;
+  }
+
+  @include tablet {
+    flex-direction: column;
+  }
 }
 
 // projects section
 
+
+
 .projects-section {
   text-align: center;
   padding: 0px 20px 30px;
-  background-color: #f8eae7;
+  background-color: $light-cream;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -328,7 +431,7 @@ svg {
   height: 5rem;
   height: 330px;
   position: relative;
-  background-color: #f5cfcc;
+  background-color: $light-pink-footer;
   flex-direction: column;
   gap: 3rem;
 
@@ -355,13 +458,13 @@ svg {
   }
 
   svg {
-    fill: #451412;
+    fill: $brown-wine;
     width: 34px;
     height: 34px;
   }
 
   strong {
     font-size: 2rem;
-    color: #451412;
+    color: $brown-wine;
   }
 }

@@ -24,12 +24,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Montserrat", Arial, sans-serif;
 
     &:hover {
       background-color: $antique-brass-lighter;
     }
   }
-
+ 
   .image-container {
     position: relative;
     display: inline-block;

@@ -10,19 +10,16 @@
 
 <body>
   <header>
-
-
-
     <nav class="nav-ul">
       <strong class="dev-name">Geiciane Barham</strong>
 
       <ul class="mobile-nav">
-        <li><button aria-label="open navigation" class="mobile-nav-button"><svg aria-hidden="true" width="40" height="40" viewBox="0 0 40 40"
-              xmlns="http://www.w3.org/2000/svg">
+        <li><button aria-label="open navigation" class="mobile-nav-button"><svg aria-hidden="true" width="40"
+              height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
               <g transform="scale(-1, 1) translate(-40, 0)">
-                <rect x="10" y="18" width="25" height="4" />
-                <rect x="15" y="26" width="20" height="4" />
-                <rect x="5" y="10" width="30" height="4" />
+                <rect x="10" y="18" width="25" height="3" />
+                <rect x="15" y="26" width="20" height="3" />
+                <rect x="5" y="10" width="30" height="3" />
               </g>
             </svg></button></li>
       </ul>
@@ -36,26 +33,39 @@
       </ul>
     </nav>
     <div class="overlay"></div>
-    <ul class="drawer">
-      <li><a href="#about">About</a></li>
-      <li><a href="#" target="_blank">Resume</a></li>
-      <li><a href="#contact"> Contact </a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li class="send-message-link"><a href="/contact">Send a message</a></li>
+    <div class="drawer">
+      <img class="drawer-top" src="./assets/images/doodles/drawer-top.png" alt="" aria-hidden="true" />
+      <ul class="drawer-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#" target="_blank">Resume</a></li>
+        <li><a href="#contact"> Contact </a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li class="send-message-link"><a href="/contact">Send a message</a></li>
+        <li class="close-nav-button"><button aria-label="close navigation"><svg width="40" height="40"
+              viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" class="close-button">
+              <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#5b3a2e" />
+                  <stop offset="100%" style="stop-color:#5b3a2e" />
+                </linearGradient>
+              </defs>
+              <line x1="10" y1="10" x2="30" y2="30" stroke="url(#grad1)" stroke-width="4" stroke-linecap="round" />
+              <line x1="10" y1="30" x2="30" y2="10" stroke="url(#grad1)" stroke-width="4" stroke-linecap="round" />
+            </svg></button>
 
-    </ul>
+      </ul>
+    </div>
   </header>
   <main>
     <section>
       <div class="hero-image">
         <div class="hero-text-container">
           <h1 class="name-main">
-            <img class="hero-decoration" src="./assets/images/doodles/gold-thicker-up.png" alt="" aria-hidden="true" />
+            <!-- <img class="hero-decoration" src="./assets/images/doodles/gold-thicker-up.png" alt="" aria-hidden="true" /> -->
             Geiciane <br> Barham
             <!-- <img class="hero-decoration" src="./assets/images/doodles/gold-bottom.png" alt="" aria-hidden="true"/> -->
 
           </h1>
-
           <div class="divider">
             <div class="line"></div>
             <svg class="diamond" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -69,106 +79,107 @@
           <a class="button-form-contact" href="#">Contact</a>
         </div>
         <img class="geici-image" src="./assets/images/profile/file.png"
-          alt="Geiciane Barham, a woman with long hair and purple shirt" />
+          alt="Geiciane Barham, a woman with long hair and brown shirt" />
       </div>
     </section>
 
     <section>
-      <div class="about-me">
-        <img class="technology-image" src="./assets/images/technologies/tech-less-real.jpg" alt="" aria-hidden="true" />
-        <div class="about-me-text-container">
-          <strong id="typewriter" class="typewriter"></strong>
-          <p>
-            Detail-oriented Full Stack Web Developer specializing in front-end development and web accessibility.
-            Experienced with single-page applications and Adobe Experience Manager (AEM). Fast learner with a background
-            in English teaching, enhancing problem-solving, time management, communication, and teamwork skills to
-            deliver high-quality, accessible web solutions.
-          </p>
-          <p>
-            Some of the technologies I have used include:
-          </p>
-          <ul class="technology-list">
-            <li>
-              <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
-                viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
-                <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#281a17" stroke="none">
-                  <path
-                    d="M768 773 l-328 -328 -128 128 -127 127 -78 -78 -77 -78 183 -182 c182 -181 184 -182 227 -182 l44 0 386 385 385 385 -75 75 c-41 41 -77 75 -80 75 -3 0 -152 -147 -332 -327z" />
-                </g>
-              </svg>HTML, CSS, and JavaScript, React, Handlebars, Sass, Less, Bootstrap
-            </li>
+      <div class="hero-image-test">
+        <img  src="./assets/images/technologies/tech-less-real.jpg"
+        alt="" aria-hidden="true" />
+        <div class="text-container">
+        <strong id="typewriter" class="typewriter"></strong>
+       <p>
+          Detail-oriented Full Stack Web Developer specializing in front-end development and web accessibility.
+          Experienced with single-page applications and Adobe Experience Manager (AEM). Fast learner with a background
+          in English teaching, enhancing problem-solving, time management, communication, and teamwork skills to
+          deliver high-quality, accessible web solutions. <br>
+          Some of the technologies I have used include:
+        </p> 
+        <ul class="technology-list">
+          <li>
+            <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
+              viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
+              <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#281a17" stroke="none">
+                <path
+                  d="M768 773 l-328 -328 -128 128 -127 127 -78 -78 -77 -78 183 -182 c182 -181 184 -182 227 -182 l44 0 386 385 385 385 -75 75 c-41 41 -77 75 -80 75 -3 0 -152 -147 -332 -327z" />
+              </g>
+            </svg>HTML, CSS, and JavaScript, React, Handlebars, Sass, Less, Bootstrap
+          </li>
 
-            <li>
-              <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
-                viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
-                <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#281a17" stroke="none">
-                  <path
-                    d="M768 773 l-328 -328 -128 128 -127 127 -78 -78 -77 -78 183 -182 c182 -181 184 -182 227 -182 l44 0 386 385 385 385 -75 75 c-41 41 -77 75 -80 75 -3 0 -152 -147 -332 -327z" />
-                </g>
-              </svg>Express, Node.js
-            </li>
-            <li>
-              <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
-                viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
-                <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#281a17" stroke="none">
-                  <path
-                    d="M768 773 l-328 -328 -128 128 -127 127 -78 -78 -77 -78 183 -182 c182 -181 184 -182 227 -182 l44 0 386 385 385 385 -75 75 c-41 41 -77 75 -80 75 -3 0 -152 -147 -332 -327z" />
-                </g>
-              </svg>GraphQL, SQL, MySQL, Sequelize, MongoDB, REST APIs
-            </li>
-            <li>
-              <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
-                viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
-                <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#281a17" stroke="none">
-                  <path
-                    d="M768 773 l-328 -328 -128 128 -127 127 -78 -78 -77 -78 183 -182 c182 -181 184 -182 227 -182 l44 0 386 385 385 385 -75 75 c-41 41 -77 75 -80 75 -3 0 -152 -147 -332 -327z" />
-                </g>
-              </svg>Adobe Experience Manager, Content Management Systems
-            </li>
-            <li>
-              <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
-                viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
-                <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#281a17" stroke="none">
-                  <path
-                    d="M768 773 l-328 -328 -128 128 -127 127 -78 -78 -77 -78 183 -182 c182 -181 184 -182 227 -182 l44 0 386 385 385 385 -75 75 c-41 41 -77 75 -80 75 -3 0 -152 -147 -332 -327z" />
-                </g>
-              </svg>WCAG (Web Content Accessibility Guidelines)
-            </li>
-            <li>
-              <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
-                viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
-                <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#281a17" stroke="none">
-                  <path
-                    d="M768 773 l-328 -328 -128 128 -127 127 -78 -78 -77 -78 183 -182 c182 -181 184 -182 227 -182 l44 0 386 385 385 385 -75 75 c-41 41 -77 75 -80 75 -3 0 -152 -147 -332 -327z" />
-                </g>
-              </svg>ARIA (Accessible Rich Internet Applications) and other elements to enhance web accessibility
-            </li>
-            <li>
-              <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
-                viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
-                <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#281a17" stroke="none">
-                  <path
-                    d="M768 773 l-328 -328 -128 128 -127 127 -78 -78 -77 -78 183 -182 c182 -181 184 -182 227 -182 l44 0 386 385 385 385 -75 75 c-41 41 -77 75 -80 75 -3 0 -152 -147 -332 -327z" />
-                </g>
-              </svg>NVDA, JAWS, and other screen readers for testing web accessibility
-            </li>
-            <li>
-              <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
-                viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
-                <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#281a17" stroke="none">
-                  <path
-                    d="M768 773 l-328 -328 -128 128 -127 127 -78 -78 -77 -78 183 -182 c182 -181 184 -182 227 -182 l44 0 386 385 385 385 -75 75 c-41 41 -77 75 -80 75 -3 0 -152 -147 -332 -327z" />
-                </g>
-              </svg>GDPR compliance expertise in JavaScript and data privacy principles
-            </li>
-          </ul>
-        </div>
+          <li>
+            <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
+              viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
+              <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#281a17" stroke="none">
+                <path
+                  d="M768 773 l-328 -328 -128 128 -127 127 -78 -78 -77 -78 183 -182 c182 -181 184 -182 227 -182 l44 0 386 385 385 385 -75 75 c-41 41 -77 75 -80 75 -3 0 -152 -147 -332 -327z" />
+              </g>
+            </svg>Express, Node.js
+          </li>
+          <li>
+            <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
+              viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
+              <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#281a17" stroke="none">
+                <path
+                  d="M768 773 l-328 -328 -128 128 -127 127 -78 -78 -77 -78 183 -182 c182 -181 184 -182 227 -182 l44 0 386 385 385 385 -75 75 c-41 41 -77 75 -80 75 -3 0 -152 -147 -332 -327z" />
+              </g>
+            </svg>GraphQL, SQL, MySQL, Sequelize, MongoDB, REST APIs
+          </li>
+          <li>
+            <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
+              viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
+              <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#281a17" stroke="none">
+                <path
+                  d="M768 773 l-328 -328 -128 128 -127 127 -78 -78 -77 -78 183 -182 c182 -181 184 -182 227 -182 l44 0 386 385 385 385 -75 75 c-41 41 -77 75 -80 75 -3 0 -152 -147 -332 -327z" />
+              </g>
+            </svg>Adobe Experience Manager, Content Management Systems
+          </li>
+          <li>
+            <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
+              viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
+              <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#281a17" stroke="none">
+                <path
+                  d="M768 773 l-328 -328 -128 128 -127 127 -78 -78 -77 -78 183 -182 c182 -181 184 -182 227 -182 l44 0 386 385 385 385 -75 75 c-41 41 -77 75 -80 75 -3 0 -152 -147 -332 -327z" />
+              </g>
+            </svg>WCAG (Web Content Accessibility Guidelines)
+          </li>
+          <li>
+            <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
+              viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
+              <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#281a17" stroke="none">
+                <path
+                  d="M768 773 l-328 -328 -128 128 -127 127 -78 -78 -77 -78 183 -182 c182 -181 184 -182 227 -182 l44 0 386 385 385 385 -75 75 c-41 41 -77 75 -80 75 -3 0 -152 -147 -332 -327z" />
+              </g>
+            </svg>ARIA (Accessible Rich Internet Applications) and other elements to enhance web accessibility
+          </li>
+          <li>
+            <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
+              viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
+              <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#281a17" stroke="none">
+                <path
+                  d="M768 773 l-328 -328 -128 128 -127 127 -78 -78 -77 -78 183 -182 c182 -181 184 -182 227 -182 l44 0 386 385 385 385 -75 75 c-41 41 -77 75 -80 75 -3 0 -152 -147 -332 -327z" />
+              </g>
+            </svg>NVDA, JAWS, and other screen readers for testing web accessibility
+          </li>
+          <li>
+            <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
+              viewBox="0 0 128.000000 128.000000" preserveAspectRatio="xMidYMid meet">
+              <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#281a17" stroke="none">
+                <path
+                  d="M768 773 l-328 -328 -128 128 -127 127 -78 -78 -77 -78 183 -182 c182 -181 184 -182 227 -182 l44 0 386 385 385 385 -75 75 c-41 41 -77 75 -80 75 -3 0 -152 -147 -332 -327z" />
+              </g>
+            </svg>GDPR compliance expertise in JavaScript and data privacy principles
+          </li>
+        </ul>
+      
+      </div>
+
       </div>
     </section>
-
+  
     <section class="projects-section">
       <h2>Projects</h2>
-      <div class="projects-grid">
+      <div id="projects" class="projects-grid">
 
         <!-- card 1 -->
         <div class="project-card">
@@ -254,9 +265,10 @@
           </div>
         </div>
     </section>
+
     <footer class="footer">
       <strong>Get in touch!</strong>
-      <ul>
+      <ul id="contact">
         <li><a href="https://www.linkedin.com/in/geiciane-barham-43b4aa201/" target="_blank"
             aria-label="check my linkedin">
 
@@ -281,7 +293,7 @@
 
     </footer>
   </main>
-  <script src="./js/index.js"></script>
+  <script defer src="./js/index.js"></script>
 </body>
 
 </html>

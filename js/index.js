@@ -15,18 +15,32 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // mobile drawer navigation
-document.addEventListener('DOMContentLoaded', function() {
-  const button = document.querySelector('.mobile-nav-button');
-  const drawer = document.querySelector('.drawer');
-  const overlay = document.querySelector('.overlay');
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector(".mobile-nav-button");
+  const drawer = document.querySelector(".drawer");
+  const overlay = document.querySelector(".overlay");
+  const closeButton = document.querySelector(".close-nav-button");
+  const drawerNav = document.querySelectorAll(".drawer-nav li");
 
-  button.addEventListener('click', function() {
-    drawer.classList.toggle('open');
-    overlay.classList.toggle('visible');
+  button.addEventListener("click", function () {
+    drawer.classList.toggle("open");
+    overlay.classList.toggle("visible");
   });
 
-  overlay.addEventListener('click', function() {
-    drawer.classList.remove('open');
-    overlay.classList.remove('visible');
+  closeButton.addEventListener("click", function () {
+    drawer.classList.remove("open");
+    overlay.classList.remove("visible");
+  });
+
+  drawerNav.forEach((element) => {
+    element.addEventListener("click", function () {
+      drawer.classList.remove("open");
+      overlay.classList.remove("visible");
+    });
+  });
+
+  overlay.addEventListener("click", function () {
+    drawer.classList.remove("open");
+    overlay.classList.remove("visible");
   });
 });
