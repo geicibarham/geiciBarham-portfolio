@@ -58,7 +58,7 @@
 .project-card h3 {
   color: #5b3a2e;
 }
-.project-card button {
+.project-card button, .project-card a {
   background-color: #844744;
   border: none;
   color: #fff;
@@ -74,7 +74,7 @@
   align-items: center;
   font-family: "Montserrat", Arial, sans-serif;
 }
-.project-card button:hover {
+.project-card button:hover, .project-card a:hover {
   background-color: #c58370;
 }
 .project-card .image-container {
@@ -137,7 +137,7 @@
 .project-card-brown p {
   color: #fff;
 }
-.project-card-brown button {
+.project-card-brown button, .project-card-brown a {
   background-color: #dcb3b0;
   border: none;
   color: #723930;
@@ -152,7 +152,7 @@
   justify-content: center;
   align-items: center;
 }
-.project-card-brown button:hover {
+.project-card-brown button:hover, .project-card-brown a:hover {
   background-color: #c58370;
 }
 .project-card-brown .image-container {
@@ -212,7 +212,7 @@
 .project-card-pink p {
   color: #fff;
 }
-.project-card-pink button {
+.project-card-pink button, .project-card-pink a {
   background-color: #dcb3b0;
   border: none;
   color: #723930;
@@ -227,7 +227,7 @@
   justify-content: center;
   align-items: center;
 }
-.project-card-pink button:hover {
+.project-card-pink button:hover, .project-card-pink a:hover {
   background-color: #c58370;
 }
 .project-card-pink .image-container {
@@ -280,12 +280,15 @@ button {
   gap: 5rem;
 }
 .nav-ul li a {
-  color: #fff;
+  color: #fae9c3;
   text-decoration: none;
   font-size: 1.3rem;
 }
-.nav-ul strong {
+.nav-ul li a:hover {
   color: #fff;
+}
+.nav-ul strong {
+  color: #fae9c3;
 }
 .nav-ul .desktop-nav {
   display: none;
@@ -321,6 +324,7 @@ button {
   gap: 1rem;
   display: flex;
   flex-direction: column;
+  visibility: hidden;
 }
 .drawer ul {
   list-style: none;
@@ -339,6 +343,7 @@ button {
 
 .drawer.open {
   right: 0;
+  visibility: visible;
 }
 
 .drawer-top {
@@ -429,6 +434,7 @@ h1.name-main {
   align-items: center;
   background-color: #281a17;
   color: #fff;
+  cursor: pointer;
   margin-left: auto;
   margin-right: auto;
 }
@@ -444,6 +450,13 @@ h1.name-main {
     margin-left: auto;
     margin-right: auto;
   }
+}
+.button-form-contact:hover {
+  background-color: #463835;
+}
+.button-form-contact:focus {
+  border: solid 2px #fff;
+  outline: none;
 }
 
 .hero-image {
@@ -621,11 +634,14 @@ h1.name-main {
   margin-right: 0.5rem;
   flex-shrink: 0;
 }
-.hero-image-test strong {
+.hero-image-test h2 {
   color: #432618;
+  font-size: 2.5rem;
 }
-.hero-image-test .typewriter {
-  font-size: 2rem;
+@media screen and (max-width: 767px) {
+  .hero-image-test h2 {
+    font-size: 1.5rem;
+  }
 }
 .hero-image-test .text-container {
   display: flex;
@@ -672,6 +688,15 @@ h1.name-main {
   font-size: 2.5em;
   margin-bottom: 10px;
   color: #5b3a2e;
+}
+.projects-section h3.projects-title {
+  font-size: 2.5rem;
+  color: #5b3a2e;
+}
+@media screen and (max-width: 767px) {
+  .projects-section h3.projects-title {
+    font-size: 1.5rem;
+  }
 }
 .projects-section .projects-section p {
   font-size: 1.2em;
@@ -728,9 +753,17 @@ h1.name-main {
   width: 34px;
   height: 34px;
 }
-.footer strong {
-  font-size: 2rem;
+.footer svg:hover {
+  fill: #5a1e18;
+}
+.footer h4 {
+  font-size: 2.5rem;
   color: #451412;
+}
+@media screen and (max-width: 767px) {
+  .footer h4 {
+    font-size: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

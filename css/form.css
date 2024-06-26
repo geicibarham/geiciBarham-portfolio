@@ -1,0 +1,119 @@
+.form-outer-container {
+  background-color: #f5cfcc;
+  min-height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #432618;
+  flex-direction: column;
+}
+.form-outer-container h1 {
+  margin-bottom: 4rem;
+}
+.form-outer-container label {
+  color: #844744;
+}
+.form-outer-container .contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  background-color: #fff;
+  border-radius: 20px;
+  position: relative;
+  width: 30%;
+  gap: 0.5rem;
+}
+@media screen and (max-width: 767px) {
+  .form-outer-container .contact-form {
+    width: 70%;
+    padding: 2rem;
+  }
+}
+.form-outer-container .contact-form input {
+  border-radius: 15px;
+  border: solid 1px #844744;
+  height: 2rem;
+  width: 100%;
+  padding: 0.2rem;
+}
+.form-outer-container .contact-form input:focus {
+  border: solid 2px #de7283;
+  outline: none;
+}
+.form-outer-container .contact-form textarea {
+  border: solid 1px #844744;
+  height: 10rem;
+  border-radius: 15px;
+  padding: 0.5rem;
+  width: 100%;
+}
+.form-outer-container .contact-form textarea:focus {
+  border: solid 2px #de7283;
+  outline: none;
+}
+.form-outer-container .contact-form button {
+  text-decoration: none;
+  border-radius: 8rem;
+  margin: 2rem 0;
+  padding: 1rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #993334;
+  color: #fff;
+  cursor: pointer;
+  border-style: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+.form-outer-container .contact-form button:hover {
+  background-color: rgba(153, 51, 52, 0.7607843137);
+}
+.form-outer-container .pink-mug-img {
+  width: 6.5rem;
+  position: absolute;
+  left: -20px;
+  top: -50px;
+}
+@media screen and (max-width: 767px) {
+  .form-outer-container .pink-mug-img {
+    width: 5rem;
+  }
+}
+.form-outer-container .right-corner-form {
+  position: absolute;
+  right: -15px;
+  width: 8rem;
+  top: -20px;
+}
+@media screen and (max-width: 767px) {
+  .form-outer-container .right-corner-form {
+    width: 6rem;
+  }
+}
+.form-outer-container .left-bottom-form {
+  position: absolute;
+  width: 8rem;
+  left: -35px;
+  bottom: 0px;
+}
+@media screen and (max-width: 767px) {
+  .form-outer-container .left-bottom-form {
+    width: 6rem;
+  }
+}
+.form-outer-container .right-bottom-form {
+  position: absolute;
+  width: 5rem;
+  right: -5px;
+  bottom: 0px;
+}
+@media screen and (max-width: 767px) {
+  .form-outer-container .right-bottom-form {
+    width: 4rem;
+  }
+}
+
+/*# sourceMappingURL=form.css.map */

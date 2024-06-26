@@ -1,0 +1,120 @@
+@import "utils/colors";
+@import "utils/mixins";
+
+// form css
+.form-outer-container {
+    background-color: $light-pink-footer;
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $dark-brown;
+    flex-direction: column;
+
+    h1 {
+        margin-bottom: 4rem;
+    }
+
+    label {
+        color: $brown-button;
+    }
+
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        padding: 4rem;
+        background-color: $white;
+        border-radius: 20px;
+        position: relative;
+        width: 30%;
+        gap: 0.5rem;
+
+        @include mobile {
+            width: 70%;
+            padding: 2rem;
+        }
+
+        input {
+            border-radius: 15px;
+            border: solid 1px $brown-button;
+            height: 2rem;
+            width: 100%;
+            padding: 0.2rem;
+        }
+
+        input:focus {
+            border: solid 2px #de7283;
+            outline: none;
+        }
+    
+        textarea {
+            border: solid 1px $brown-button; 
+            height: 10rem;
+            border-radius: 15px;
+            padding: 0.5rem;
+            width: 100%;
+        }
+
+        textarea:focus {
+            border: solid 2px #de7283;
+            outline: none;
+        }
+
+        button {
+            @include rounded-button(#993334,$white);
+            border-style: hidden;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+
+            &:hover {
+                background-color: #993334c2;
+            }
+        }
+    }
+
+   
+
+    .pink-mug-img {
+        width: 6.5rem;
+        position: absolute;
+        left: -20px;
+        top: -50px;
+        @include mobile {
+            width: 5rem;
+        }
+    }
+
+    .right-corner-form {
+        position: absolute;
+        right: -15px;
+        width: 8rem;
+        top: -20px;
+        @include mobile {
+            width: 6rem;
+        }
+    }
+
+    .left-bottom-form {
+        position: absolute;
+        width: 8rem;
+        left: -35px;
+        bottom: 0px;
+        // height: 8rem;
+        @include mobile {
+            width: 6rem;
+        }
+    }
+
+    .right-bottom-form {
+        position: absolute;
+        width: 5rem;
+        right: -5px;
+        bottom: 0px;
+        @include mobile {
+            width: 4rem;
+        }
+    }
+    
+  }

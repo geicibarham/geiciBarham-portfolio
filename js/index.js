@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeButton = document.querySelector(".close-nav-button");
   const drawerNav = document.querySelectorAll(".drawer-nav li");
 
+  drawer.setAttribute("aria-hidden", "true");
+
   button.addEventListener("click", function () {
     drawer.classList.toggle("open");
     overlay.classList.toggle("visible");

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("5GujIIJYi54fwKekO");
+        })();
+    </script>
+    <title>Contact</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-ul">
+            <strong class="dev-name">Geiciane Barham</strong>
+
+            <ul class="mobile-nav">
+                <li><button aria-label="open navigation" class="mobile-nav-button"><svg aria-hidden="true" width="40"
+                            height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                            <g transform="scale(-1, 1) translate(-40, 0)">
+                                <rect x="10" y="18" width="25" height="3" />
+                                <rect x="15" y="26" width="20" height="3" />
+                                <rect x="5" y="10" width="30" height="3" />
+                            </g>
+                        </svg></button></li>
+            </ul>
+            <ul class="desktop-nav">
+                <li><a href="#about">About</a></li>
+                <li><a href="#" target="_blank">Resume</a></li>
+                <li><a href="#contact"> Contact </a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li class="send-message-link"><a href="/contact">Send a message</a></li>
+
+            </ul>
+        </nav>
+        <div class="overlay"></div>
+        <div class="drawer">
+            <img class="drawer-top" src="./assets/images/doodles/drawer-top.png" alt="" aria-hidden="true" />
+            <ul class="drawer-nav">
+                <li><a href="#about">About</a></li>
+                <li><a href="#" target="_blank">Resume</a></li>
+                <li><a href="#contact"> Contact </a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li class="send-message-link"><a href="/contact">Send a message</a></li>
+                <li class="close-nav-button"><button aria-label="close navigation"><svg width="40" height="40"
+                            viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" class="close-button">
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#5b3a2e" />
+                                    <stop offset="100%" style="stop-color:#5b3a2e" />
+                                </linearGradient>
+                            </defs>
+                            <line x1="10" y1="10" x2="30" y2="30" stroke="url(#grad1)" stroke-width="4"
+                                stroke-linecap="round" />
+                            <line x1="10" y1="30" x2="30" y2="10" stroke="url(#grad1)" stroke-width="4"
+                                stroke-linecap="round" />
+                        </svg></button>
+
+            </ul>
+        </div>
+    </header>
+    <section class="form-outer-container">
+
+        <h1 id="formTitle">Send a message</h1>
+        <form id="contact-form" class="contact-form" aria-labelledby="formTitle">
+
+            <img src="./assets/images/form/photo_eraser (2).png" alt="" aria-hidden="true" class="pink-mug-img" />
+            <label for="name">Name</label>
+            <input aria-required="true" type="text" id="name" name="user_name">
+            <label for="email">Email</label>
+            <input aria-required="true" type="email" id="email" name="user_email">
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Send</button>
+            <img src="./assets/images/form/right-corner-top.png" alt="" aria-hidden="true" class="right-corner-form" />
+            <img src="./assets/images/form/right-bottom.png" alt="" aria-hidden="true" class="right-bottom-form" />
+            <img src="./assets/images/form/right-bottom1.png" alt="" aria-hidden="true" class="left-bottom-form" />
+        </form>
+
+    </section>
+    <footer class="footer">
+        <h2>Get in touch!</h2>
+        <ul id="contact">
+            <li><a href="https://www.linkedin.com/in/geiciane-barham-43b4aa201/" target="_blank"
+                    aria-label="check my linkedin">
+
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M22.23 0H1.77A1.77 1.77 0 000 1.77v20.46A1.77 1.77 0 001.77 24h20.46A1.77 1.77 0 0024 22.23V1.77A1.77 1.77 0 0022.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.5a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM20.45 20.45h-3.56v-5.61c0-1.34-.03-3.06-1.86-3.06-1.86 0-2.15 1.45-2.15 2.95v5.72H9.32V9h3.42v1.56h.05c.48-.91 1.65-1.86 3.4-1.86 3.63 0 4.3 2.39 4.3 5.5v6.25z" />
+                    </svg>
+                </a></li>
+            <li><a href="https://github.com/geicibarham" target="_blank" aria-label="check my github">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.24 1.84 1.24 1.07 1.835 2.805 1.305 3.49.997.11-.775.42-1.305.76-1.605-2.665-.305-5.465-1.335-5.465-5.93 0-1.31.47-2.38 1.24-3.22-.125-.305-.54-1.525.115-3.18 0 0 1.01-.325 3.3 1.23a11.52 11.52 0 013-.405c1.02.005 2.04.14 3 .405 2.28-1.555 3.29-1.23 3.29-1.23.655 1.655.24 2.875.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.805 5.62-5.475 5.92.43.37.81 1.1.81 2.22 0 1.605-.015 2.895-.015 3.285 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                </a></li>
+            <li><a href="mailto:geicianecosta43@gmail.com" aria-label="send me an email">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M12 12.713l11.985-8.713H.015L12 12.713zM12 13.787L.015 5.073v13.854h23.97V5.073L12 13.787z" />
+                    </svg>
+                </a></li>
+        </ul>
+        <img class="corner-right-img" src="./assets/images/footer/file (1).png" alt="" aria-hidden="true" />
+
+    </footer>
+    <script src="./js/form.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

@@ -31,13 +31,16 @@ button {
   }
 
   li a {
-    color: $white;
+    color: #fae9c3;
     text-decoration: none;
     font-size: 1.3rem;
+    &:hover {
+      color: $white;
+    }
   }
 
   strong {
-    color: $white;
+    color: #fae9c3;
   }
 
   .desktop-nav {
@@ -78,6 +81,7 @@ button {
   gap: 1rem;
   display: flex;
   flex-direction: column;
+  visibility: hidden;
 
   ul {
     @include normalize-list;
@@ -98,6 +102,7 @@ button {
 
 .drawer.open {
   right: 0;
+  visibility: visible;
 }
 
 .drawer-top {
@@ -178,7 +183,7 @@ h1.name-main {
 .button-form-contact {
   @include rounded-button($super-dark-brown, $white);
   margin-left: auto;
-    margin-right: auto;
+  margin-right: auto;
 
   @include mobile {
     font-size: 1rem;
@@ -189,6 +194,14 @@ h1.name-main {
   @include tablet {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  &:hover {
+    background-color: #463835;
+  }
+  &:focus {
+    border: solid 2px $white;
+    outline: none;
   }
 }
 
@@ -349,12 +362,9 @@ h1.name-main {
     flex-shrink: 0;
   }
 
-  strong {
+  h2 {
     color: $dark-brown;
-  }
-
-  .typewriter {
-    font-size: 2rem; // 32px
+    @include heading;
   }
 
   .text-container {
@@ -369,7 +379,7 @@ h1.name-main {
       width: 100%;
     }
 
-    @include tablet{
+    @include tablet {
       width: 80%;
     }
   }
@@ -387,8 +397,6 @@ h1.name-main {
 
 // projects section
 
-
-
 .projects-section {
   text-align: center;
   padding: 0px 20px 30px;
@@ -401,6 +409,11 @@ h1.name-main {
   h2 {
     font-size: 2.5em;
     margin-bottom: 10px;
+    color: $brown;
+  }
+
+  h3.projects-title {
+    @include heading;
     color: $brown;
   }
 
@@ -461,10 +474,14 @@ h1.name-main {
     fill: $brown-wine;
     width: 34px;
     height: 34px;
+    &:hover {
+      fill: #5a1e18;
+    }
   }
 
-  strong {
-    font-size: 2rem;
+  h4 {
+    @include heading;
     color: $brown-wine;
+   
   }
 }
